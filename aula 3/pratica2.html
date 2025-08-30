@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>prática 2</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <h1>prática 2</h1>
+
+  <div class="container">
+
+    <fieldset>
+      <legend>dados pessoais</legend>
+      <div class="grid">
+        <label for="nome">Nome *</label>
+        <input id="nome" type="text" maxlength="100" placeholder="Seu nome" />
+
+        <label for="sobrenome">Sobrenome *</label>
+        <input id="sobrenome" type="text" maxlength="100" placeholder="Seu sobrenome" />
+
+        <label for="email">E-mail *</label>
+        <input id="email" type="email" placeholder="voce@exemplo.com" />
+
+        <label for="nascimento">Data de Nascimento</label>
+        <input id="nascimento" type="date" min="1920-01-01" max="2024-01-01" />
+        <small class="hint">Permitido de 01/01/1920 até 01/01/2024.</small>
+
+        <div class="row">
+          <label>sexo</label>
+          <div class="radios">
+            <label><input type="radio" name="sexo" value="M" /> Masculino</label>
+            <label><input type="radio" name="sexo" value="F" /> Feminino</label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>endereço</legend>
+      <div class="grid">
+        <label for="endereco">Endereço</label>
+        <input id="endereco" type="text" maxlength="200" placeholder="Rua, número, complemento" />
+
+        <label for="cep">CEP</label>
+        <input id="cep" type="text" maxlength="10" placeholder="00000-000" />
+
+        <label for="uf">Estado (UF)</label>
+        <select id="uf">
+          <option value="" selected disabled>Selecione a UF</option>
+          <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+          <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+          <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+          <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+          <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+          <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+          <option>SP</option><option>SE</option><option>TO</option>
+        </select>
+
+        <label for="cor">Cor favorita</label>
+        <input id="cor" type="color" value="#3f51b5" />
+      </div>
+    </fieldset>
+
+    <div class="actions">
+      <button class="primary">enviar</button>
+      <button class="ghost">limpar</button>
+    </div>
+  </div>
+</body>
+</html>

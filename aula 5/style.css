@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.main_container {
+    border: 2px solid black;
+    padding: 10px;
+    width: 250px;
+}
+
+.container_resultado {
+    border: 1px solid black;
+    min-height: 40px;
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: right;
+    background: #eee;
+    font-size: 20px;
+}
+
+.container_teclas {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border: 1px solid black;
+    background: lightgray;
+    padding: 10px;
+    margin: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: gray;
+    color: white;
+}
+
+.container_teclas_numeros {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container_teclas_numeros button {
+    flex: 1 0 30%;
+}

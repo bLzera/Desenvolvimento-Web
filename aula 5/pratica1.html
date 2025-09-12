@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>calculadora</title>
+</head>
+<body>
+    <div class="main_container flex-row" id="main_container">
+        <div class="container_resultado flex-row">
+            <div class="container_resultado_anterior flex-column">
+                <div class="resultado_anterior" id="resultado_anterior"></div>
+                <div class="resultado_anterior_operacao" id="resultado_anterior_operacao"></div>
+            </div>
+            <div class="container_resultado flex-column">
+                <div class="resultado" id="resultado">0</div>
+                <div class="resultado_operacao" id="resultado_operacao"></div>
+            </div>
+        </div>
+        <div class="container_teclas flex-row">
+            <div class="container_teclas_limpeza flex-column">
+                <button class="botao_limpeza" id="clear">C</button>
+                <button class="botao_limpeza" id="delete">APAGAR</button>
+            </div>
+            <div class="container_teclas_baixo flex-column">
+                <div class="container_teclas_numeros flex-row">
+                    <button class="botao_numero" id="num_0">1</button>
+                    <button class="botao_numero" id="num_1">2</button>
+                    <button class="botao_numero" id="num_2">3</button>
+                    <button class="botao_numero" id="num_3">4</button>
+                    <button class="botao_numero" id="num_4">5</button>
+                    <button class="botao_numero" id="num_5">6</button>
+                    <button class="botao_numero" id="num_6">7</button>
+                    <button class="botao_numero" id="num_7">8</button>
+                    <button class="botao_numero" id="num_8">9</button>
+                    <button class="botao_numero" id="num_9">0</button>                    
+                    <button class="botao_numero" id="num_10">.</button>                    
+                </div>
+                <div class="container_teclas_operacoes flex-row">
+                    <button class="botao_operacao" id="add">+</button>
+                    <button class="botao_operacao" id="sub">-</button>
+                    <button class="botao_operacao" id="mult">x</button>
+                    <button class="botao_operacao" id="div">%</button>
+                </div>
+            </div>
+            <button class="botao_execute" id="execute">=</button>
+        </div>
+    </div>
+</body>
+</html>
+<script src="pratica1.js"></script>

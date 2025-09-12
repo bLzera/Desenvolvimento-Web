@@ -1,0 +1,41 @@
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+th {
+    background-color: #ddd;
+}
+
+tr:last-child td {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+td:last-child,
+th:last-child {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+button {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px 15px;
+    border: 1px solid black;
+    background: #eee;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ccc;
+}

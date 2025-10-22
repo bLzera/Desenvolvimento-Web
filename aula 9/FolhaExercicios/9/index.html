@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>atividade 9</title>
+</head>
+<body class="container">
+    <h2>moto do juquinha</h2>
+    <form action="main.php" method="get" class="container">
+        <label for="original">valor original:</label>
+        <input type="number" step="any" name="original" value="8654">
+
+        <label for="parcelas">quantidade de parcelas:</label>
+        <select name="parcelas" id="parcelas">
+            <option value="0">24 Vezes</option>
+            <option value="1">36 Vezes</option>
+            <option value="2">48 Vezes</option>
+            <option value="3">60 Vezes</option>
+        </select>
+
+        <button type="submit">calcular o valor das parcelas</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>atividade 7</title>
+</head>
+<body class="container">
+    <h2>carro da mariazinha</h2>
+    <form action="main.php" method="get" class="container">
+        <label for="original">valor original:</label>
+        <input id="original" type="number" name="original" step="any" value="22500" required>
+        <label for="parcelas">quantidade de parcelas:</label>
+        <input id="parcelas" type="number" name="parcelas" step="any" value="60" required>
+        <label for="valor_parcela">valor de cada parcela:</label>
+        <input id="valor_parcela" type="number" name="valor_parcela" step="any" value="489.65" required>
+
+        <button type="submit">calcular valor total dos juros</button>
+    </form>
+</body>
+</html>

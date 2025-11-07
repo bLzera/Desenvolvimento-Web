@@ -1,0 +1,69 @@
+database sacanagem
+
+tbdispositivo
+	disid (int-pk)
+	setid (int-fk)
+	disnome (string-not null)
+	disstatus (int-not null-default 1)
+
+tbpergunta
+	perid (int-pk)
+	pertexto (string-not null)
+	perstatus (int-not null-default 1)
+
+tbsetor
+	setid (int-pk)
+	setnome (string-not null)
+	setstatus (int-not null-default 1)
+
+tbperguntasetor
+	prsid (int-pk)
+	setid (int-fk)
+	perid (int-fk)
+	prsordem (int-not null)
+	prsstatus (int-not null-default 1)
+
+tbresposta
+	resid (int-pk)
+	avaid (int-fk)
+	perid (int-fk)
+	resvalor (int-not null-check >= 0 and < 10)
+
+tbavaliacao
+	avaid (int-pk)
+	disid (int-fk)
+	setid (int-fk)
+	avatexto (string)
+	avadata (datetime-now())
+
+tbusuario
+	usuid (int-pk)
+	usunome (string-not null)
+	usupwd (string-not null)
+	usustatus (int-not null-default 1)
+	
+//$model->getPerguntas()
+//
+// $result = pg_query(select pertexto 
+// from tbpergunta a
+// join tbperguntasetor b
+// 		on a.perid = b.perid
+// where b.setid = $dispositivo->getSetId()
+// order by b.prsordem);
+// $ret = array();
+// while ($row = pg_fetch_assoc($result)){
+// 		$ret[] = $row;
+// }
+
+// $model->addAvaliacao()
+//
+// $id = (select max(avaid) from tbavaliacao) + 1;
+// 
+// insert into tbavaliacao (avaid, disid, setid) 
+// values ($id, $dispositivo->getDisId(), $dispositivo->getSetId());
+//
+// $resposta = [
+// 	 'perid' = $
+// ]
+
+//

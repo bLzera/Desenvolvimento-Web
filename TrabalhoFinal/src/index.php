@@ -1,20 +1,14 @@
 <?php
 
+require_once 'router.php';
+require_once '../config.php';
+
+$uri = explode('/', $_SERVER['REQUEST_URI']);
+$uri = $uri[array_key_last($uri)];
 $method = $_SERVER['REQUEST_METHOD'];
-switch($method){
-    case 'POST' : $params = $_POST;
-    break;
-    case 'GET' : $params = $_GET;
-    break;
-    default : throw new Exception('Invalid Method');
-};
 
-$teste = [1];
+$router = new router($uri, $method);
+$router->run();
 
-echo var_dump($teste);
-
-$teste[] = 2;
-
-echo var_dump($teste);
-
+echo $connectionString;
 ?>

@@ -1,5 +1,9 @@
 <?php
 
-class controller {}
+class controller {
+    protected function __construct(){
+
+    }
+}
 
 ?>

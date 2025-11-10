@@ -9,6 +9,4 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 $router = new router($uri, $method);
 $router->run();
-
-echo $connectionString;
 ?>

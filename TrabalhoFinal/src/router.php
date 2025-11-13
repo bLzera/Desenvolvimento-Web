@@ -8,6 +8,7 @@ class router {
             //'METHOD URI' => ['nomeController', 'nomeAcao']
             'POST getPerguntas' => ['controllerPerguntas', 'getPerguntas'],
             'POST addPergunta'  => ['controllerPerguntas', 'addPergunta'],
+            'POST addAvaliacao' => ['controllerAvaliacao', 'addAvaliacao'],
         ];
         
         $key = $this->getmethod() . ' ' . $this->getUri();

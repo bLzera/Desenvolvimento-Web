@@ -7,14 +7,14 @@ class modelResposta extends model {
     private $perid;
     private $resvalor;
 
-    public function __construct($tablename = 'tbresposta'){
-        parent::__construct($tablename);
+    public function __construct(){
+        parent::__construct();
     }
 
-    public function inserir($avaid, $perid, $resvalor){
+    public function salvarResposta(){
         $stmt = 'insert into tbresposta (avaid, perid, resvalor) values ($1, $2, $3)';
-        $params = [$avaid, $perid, $resvalor];
-        return pg_query_params($this->getConnection(), $stmt, $params);
+        $params = [$this->avaid, $this->perid, $this->resvalor];
+        return $this->runInsert($stmt, $params);
     }
 
     public function getResid(){

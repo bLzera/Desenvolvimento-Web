@@ -9,9 +9,12 @@ class controllerPerguntas extends controller{
     }
 
     public function getPerguntas(){
+        $data = json_decode(file_get_contents('php://input'), true);
         $model = new modelPergunta();
-        $result = $model->listarPorSetor(3);
-        return $result;
+        if(!isset($data['setid'])){
+            return $model->buscaTodasPerguntas();
+        }
+        return $model->listarPorSetor($data['setid']);
     }
 
     public function addPergunta(){

@@ -1,11 +1,11 @@
 <?php
-require_once 'include/database.php';
+require_once 'collection/collection.php';
 
-class collectionResposta extends database{
-    private $respostas;
+class collectionPergunta extends collection{
+    private $perguntas;
 
     public function __construct(){
-        $this->respostas = array();
+        $this->perguntas = array();
     }
 
     

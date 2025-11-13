@@ -5,18 +5,23 @@ class model {
     private $db;
     protected $tablename;
 
-    protected function __construct($tablename){
+    protected function __construct(){
         $this->db = database::getInstance();
-        if($tablename){
-            $this->tablename = $tablename;
-        }
+    }    
+
+    protected function beginTransaction(){
+        pg_query($this->db, "BEGIN");
+        return $this;
     }
 
-    private function testConnection(){
-        if($this->getConnection()){
-            return true;
-        }
-        throw new Exception('Erro ao conectar à Database');
+    protected function commitTransaction(){
+        pg_query($this->db, "COMMIT");
+        return $this;
+    }
+
+    protected function rollbackTransaction(){
+        pg_query($this->db, "ROLLBACK");
+        return $this;
     }
 
     protected function getConnection(){
@@ -31,6 +36,22 @@ class model {
         } catch (Exception $e) {
             echo 'Exception encontrada: ', $e->getMessage(), "\n";
         }
+    }
+
+    protected function runInsert($stmt, $params){
+        try {
+            $this->testConnection();
+            return pg_query_params($this->getConnection(), $stmt, $params);
+        } catch (Exception $e) {
+            echo 'Exception encontrada: ', $e->getMessage(), "\n";
+        }
+    }
+
+    private function testConnection(){
+        if($this->getConnection()){
+            return true;
+        }
+        throw new Exception('Erro ao conectar à Database');
     }
 }
 

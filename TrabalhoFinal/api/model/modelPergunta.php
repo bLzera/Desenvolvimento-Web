@@ -26,10 +26,8 @@ class modelPergunta extends model {
         $stmt = "
             select a.*
             from tbpergunta a
-            join tbperguntasetor b
-                on a.perid = b.perid
-            where a.perstatus = 1 and b.prsstatus = 1
-            order by b.prsordem
+            where a.perstatus = 1
+            order by a.perid
         ";
         return $this->runSelect($stmt, []);
     }
